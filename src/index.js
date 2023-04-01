@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import Login from './Login';
 import reportWebVitals from './reportWebVitals';
-import secrets from './secrets';
+// import secrets from './secrets';
 
 import { initializeApp } from "firebase/app";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
