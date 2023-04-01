@@ -1,0 +1,210 @@
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App-logo {
+  height: 8vh;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  min-height: 12vh;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2vh;
+  font-weight: bold;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #60ceff;
+  background-color: #393d44;
+}
+
+.App-title {
+  position: absolute;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Todo {
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #98d0e9;
+  border-radius: 5pt;
+  padding: 1em;
+  margin-top: 1em;
+}
+
+.Todo-list-heading {
+  width: 100%;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #264c72;
+  margin: 0em;
+  padding: 0.5em 0em 0.3em 0em;
+  border-bottom: 2px solid #6291c1;
+}
+
+.Todo-list {
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Todo-list-item {
+  margin: 0.5em;
+  padding: 0.5em;
+  border-radius: 5pt;
+  display: flex;
+  flex-direction: row;
+}
+
+.Todo-list-item:hover {
+  background: #d2e8ff;
+}
+
+.Todo-list-item-text {
+  width: 70%;
+  /* font-size: 1.2em; */
+  /* color: #545454; */
+  text-align: left;
+}
+
+.Todo-list-item-date {
+  color: #333;
+  padding-right: 0.5em;
+}
+
+.Todo-list-item-btns {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.Todo-list-item-selected {
+  background: #d2e8ff;
+}
+
+.Todo-list-item-past {
+  background: #f06558;
+}
+.Todo-list-item-past:hover, .Todo-list-item-selected.Todo-list-item-past {
+  background: #f2b8b2
+}
+
+.Todo-list-item-current {
+  background: #fedf9f;
+}
+.Todo-list-item-current:hover, .Todo-list-item-selected.Todo-list-item-current {
+  background: #ffefc9;
+}
+
+.add-item-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em 0.5em;
+  width: 100%;
+  background: #8bb4dd;
+  border-top: 2px solid #6291c1;
+}
+
+.add-item-input {
+  padding: 0.5em;
+  border-radius: 2pt;
+  /* background: #8bb4dd; */
+  color: #1e2c3a;
+  font-weight: normal;
+  border: 0px;
+  outline: 0px;
+  border-style: hidden;
+  margin-right: 1em;
+}
+
+.add-item-btn {
+  padding: 0em 0.5em;
+  border-radius: 0pt 0pt 2pt 2pt;
+  width: 100%;
+  background: #70a2d5;
+  color: #0f3b68;
+  font-weight: normal;
+  border: 2px solid transparent;
+  border-top: 2px solid #6291c1;
+}
+
+.add-item-btn:hover {
+  background: #55a2f1;
+  font-weight: normal;
+}
+
+.add-item-btn:active {
+  background: #4f94dd;
+  /* border-color: #0f3b68; */
+  border-top: 2px solid #6291c1;
+}
+
+.item-btn {
+  color: black;
+  margin: auto 0.5em;
+  display: inline;
+  cursor: default;
+}
+
+.item-btn-blue:hover {color: darkblue;}
+.item-btn-blue:active {color: blue;}
+
+.item-btn-green:hover {color: darkgreen;}
+.item-btn-green:active {color: rgb(2, 160, 2);}
+
+.item-btn-red:hover {color: darkred;}
+.item-btn-red:active {color: red;}
+
+/* The animation code */
+@keyframes fade-in-animation {
+  from {opacity: 0.0;}
+  to {opacity: 1.0;}
+}
+
+.swap-btn-selected {
+  color: #5083a3;
+}
+
+.fade-in {
+  animation-name: fade-in-animation;
+  animation-duration: 1s;
+}
+
+.hidden { display: none; }
